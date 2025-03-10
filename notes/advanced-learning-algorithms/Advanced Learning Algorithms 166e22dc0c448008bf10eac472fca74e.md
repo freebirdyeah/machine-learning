@@ -4,7 +4,7 @@
 
 Imagine if we have 4 input features represented by a vector $x$ and we feed them to this neural network:-
 
-![the x vector represents the input features, the middle layer is referred to as “hidden layer”, these type of NNs are called “multilayer perceptrons”](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image.png)
+![the x vector represents the input features, the middle layer is referred to as “hidden layer”, these type of NNs are called “multilayer perceptrons”](image.png)
 
 the x vector represents the input features, the middle layer is referred to as “hidden layer”, these type of NNs are called “multilayer perceptrons”
 
@@ -16,7 +16,7 @@ $a = g(z);$   where $g(z)$  is the sigmoid function and $z$ $= dot(w, x) + b$
 
 Now each of these neurons will output a value between $0-1$ and we will get a vector of activation values which is then passed to the final output layer and once again logistic regression is performed on the vector passed to get one final output value between $0-1$.
 
-![image.png](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%201.png)
+![image.png](image%201.png)
 
 $a^{[l]}_j = g(w^{[l]}_j · a^{[l-1]} + b^{[l]}_j)$   represents the activation value of the $j^{th}$ neuron in $l^{th}$ layer
 
@@ -24,13 +24,13 @@ $a^{[l]}_j = g(w^{[l]}_j · a^{[l-1]} + b^{[l]}_j)$   represents the activation 
 
 Let’s look at the Handwritten Digit Recognition Problem
 
-![We have a 8x8 image with each pixel having a value between 0-255 representing the brightness of that pixel, the aim is to have a black and white image of number written on an 8x8 grid](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%202.png)
+![We have a 8x8 image with each pixel having a value between 0-255 representing the brightness of that pixel, the aim is to have a black and white image of number written on an 8x8 grid](image%202.png)
 
 We have a 8x8 image with each pixel having a value between 0-255 representing the brightness of that pixel, the aim is to have a black and white image of number written on an 8x8 grid
 
 Now we are given 64 pixels meaning 64 input features lets feed it to a NN.
 
-![image.png](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%203.png)
+![image.png](image%203.png)
 
 Then $a^{[1]}$  is fed to layer 2 and we get $a^{[2]}$ which is fed to layer 3 and we finally get a number $a^{[3]}$ between $0-1$ which represents the probability of the written number being 1. This Algorithm is called **“forward propagation”** propagating the activation values from left to right.
 
@@ -38,7 +38,7 @@ Then $a^{[1]}$  is fed to layer 2 and we get $a^{[2]}$ which is fed to layer 3 a
 
 Let’s take the example of Coffee Roasting. We have two measures Temperature and Duration, when we plot the Temp v/s Duration Graphs we will have some roasts resulting in good coffee and some resulting in bad coffee
 
-![image.png](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%204.png)
+![image.png](image%204.png)
 
 Inference in Tensorflow
 
@@ -106,7 +106,7 @@ The loss parameter signifies which loss function to use, epochs basically refers
 
 ## Activation Functions
 
-![we can use multiple different activation functions to use in our NN](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%205.png)
+![we can use multiple different activation functions to use in our NN](image%205.png)
 
 we can use multiple different activation functions to use in our NN
 
@@ -114,15 +114,15 @@ we can use multiple different activation functions to use in our NN
 
 Now if we take up the problem of handwritten digit classification again, we might need to predict multiple numbers. Now this time $y$ can’t just be a singular binary value.
 
-![image.png](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%206.png)
+![image.png](image%206.png)
 
 ### Softmax Regression
 
-![Softmax Regression is a general case of linear regression](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%207.png)
+![Softmax Regression is a general case of linear regression](image%207.png)
 
 Softmax Regression is a general case of linear regression
 
-![image.png](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%208.png)
+![image.png](image%208.png)
 
 every $a$ value (predicted value) represents the probability of $y$ (target value) being the class and is represented by:- 
 
@@ -146,7 +146,7 @@ Tensorflow has two potential formats for target values and the selection of the 
 - SparseCategorialCrossentropy: expects the target to be an integer corresponding to the index. For example, if there are 10 potential target values, y would be between 0 and 9.
 - CategoricalCrossEntropy: Expects the target value of an example to be one-hot encoded where the value at the target index is 1 while the other N-1 entries are zero. An example with 10 potential target values, where the target is 2 would be [0,0,1,0,0,0,0,0,0,0].
 
-![image.png](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%209.png)
+![image.png](image%209.png)
 
 ```python
 # NAIVE IMPLEMENTATION FROM THE LECTURE (NOT RECOMMENDED)
@@ -197,7 +197,7 @@ The key difference between multinomial logistic regression and multi-label class
 
 In this case, we will have an output vector with multiple probabilities, think of it as multiple binary classification problems pieced together.
 
-![a trained NN, detecting the presence of either a car, bus or pedestrian in an image.](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%2010.png)
+![a trained NN, detecting the presence of either a car, bus or pedestrian in an image.](image%2010.png)
 
 a trained NN, detecting the presence of either a car, bus or pedestrian in an image.
 
@@ -205,11 +205,11 @@ a trained NN, detecting the presence of either a car, bus or pedestrian in an im
 
 ### Advanced Optimization
 
-![each weight gets a unique learning rate for itself](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%2011.png)
+![each weight gets a unique learning rate for itself](image%2011.png)
 
 each weight gets a unique learning rate for itself
 
-![image.png](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%2012.png)
+![image.png](image%2012.png)
 
 To implement this in code:-
 
@@ -235,6 +235,6 @@ NOTE: When scaling the entire dataset, cross-val dataset must also be scaled as 
 
 You will scale the cross validation set below by using the same `StandardScaler` you used earlier but only calling its [`transform()`](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler.transform) method instead of [`fit_transform()`](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler.fit_transform).
 
-![image.png](Advanced%20Learning%20Algorithms%20166e22dc0c448008bf10eac472fca74e/image%2013.png)
+![image.png](image%2013.png)
 
 ## Decision Trees
